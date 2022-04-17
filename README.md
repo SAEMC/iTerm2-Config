@@ -2,13 +2,7 @@
 
 ### 준비 사항
 
-- Git 설치
-```
-$ (sudo) apt-get update && \
-  (sudo) apt-get install -y git
-```
-
-- SAEMC User Manager 프로젝트 다운로드
+- SAEMC iTerm2 Config 프로젝트 다운로드
 ```
 $ git clone https://github.com/SAEMC/iTerm2-Config.git
 ```
