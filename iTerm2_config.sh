@@ -8,6 +8,15 @@
 brew install zsh
 
 # Install Oh-My-Zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Modify ~/.zshrc
+# Change Theme to agnoster
+
+# plugins=(git git-prompt)
+
+# Set Highlighting
+
 
 # Download D2Coding
 
