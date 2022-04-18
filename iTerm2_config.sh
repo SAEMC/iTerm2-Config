@@ -3,6 +3,10 @@
 # check Homebrew
 brew_check="/bin/bash -c 'brew --version >/dev/null 2>&1'"
 brew_install="/bin/bash -c 'curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh'"
+zsh_install="/bin/bash -c brew install zsh'"
+OMZ_install="sh -c 'curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh'"
+
+config_move="/bin/bash -c 'mv ./com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist'"
 
 # Install Homebrew
 eval "$brew_check"
@@ -15,11 +19,11 @@ eval "$brew_check"
 
 if [[ "$?" -eq 0 ]]; then
 	# Install ZSH
-	brew install zsh
-fi
+	eval "$zsh_install"
+	fi
 
 # Install Oh-My-Zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+eval "$OMZ_install"
 
 # Modify ~/.zshrc
 # Change Theme to agnoster
@@ -32,4 +36,5 @@ sed -i -e 's/ZSH_THEME=\"\"/ZSH_THEME=\"agnoster\"/g' test.txt
 
 # Download D2Coding
 
-# Move iTerm2 config to ~/Library
+# Move iTerm2 config
+eval "$config_move"
