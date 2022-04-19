@@ -15,6 +15,9 @@ while true; do
 	fi
 done
 
+# Install iTerm2
+/bin/zsh -c "brew install --cask iterm2"
+
 # Install Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
