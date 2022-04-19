@@ -29,6 +29,7 @@ echo "# ZSH Disappear Username" >>${HOME}/.zshrc
 echo "prompt_context() {}" >>${HOME}/.zshrc
 
 # ZSH Highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${HOME}/.zsh/zsh-syntax-highlighting/
 echo "# ZSH Highlighting" >>${HOME}/.zshrc
 echo "source ${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>${HOME}/.zshrc
 
@@ -36,8 +37,8 @@ echo "source ${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >
 git clone https://github.com/naver/d2codingfont.git
 mv ./d2codingfont/D2Coding-Ver1.3.2-20180524.zip . && \
 unzip D2Coding-Ver1.3.2-20180524.zip
-mv ./D2Coding/* ${HOME}//Library/Fonts/ && \
-mv ./D2CodingLigature/* ${HOME}//Library/Fonts/ && \
+mv ./D2Coding/* ${HOME}/Library/Fonts/ && \
+mv ./D2CodingLigature/* ${HOME}/Library/Fonts/ && \
 mv ./D2CodingAll/* ${HOME}/Library/Fonts/
 
 # Move iTerm2 config
