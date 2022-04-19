@@ -1,19 +1,13 @@
 #!/bin/bash
 
-# check Homebrew
 brew_check="/bin/bash -c 'brew --version >/dev/null 2>&1'"
-brew_install="/bin/bash -c 'curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh'"
-zsh_install="/bin/bash -c brew install zsh'"
-OMZ_install="sh -c 'curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh'"
-
-config_move="/bin/bash -c 'mv ./com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist'"
 
 # Install Homebrew
 while true; do
 	eval "$brew_check"
 
 	if [[ "$?" -ne 0 ]]; then
-		eval "$brew_install"
+		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	else
 		break
 	fi
@@ -21,22 +15,30 @@ done
 
 if [[ "$?" -eq 0 ]]; then
 	# Install ZSH
-	eval "$zsh_install"
-	fi
+	/bin/bash -c "brew install zsh"
+fi
 
 # Install Oh-My-Zsh
-eval "$OMZ_install"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Modify ~/.zshrc
-# Change Theme to agnoster
-sed -i -e 's/ZSH_THEME=\"\"/ZSH_THEME=\"agnoster\"/g' ~/.zshrc
+# ZSH Change Theme to agnoster
+sed -i -e 's/ZSH_THEME="robyrussell"/ZSH_THEME="agnoster"/g' ${HOME}/.zshrc
 
-# plugins=(git git-prompt)
+# ZSH Disappear Username
+echo "prompt_context() {}" >>${HOME}/.zshrc
 
-# Set Highlighting
-
+# ZSH Highlighting
+echo "source ${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>${HOME}/.zshrc
 
 # Download D2Coding
+git clone https://github.com/naver/d2codingfont.git
+mv ./d2codingfont/D2Coding-Ver1.3.2-20180524.zip . && \
+unzip D2Coding-Ver1.3.2-20180524.zip
+mv ./D2Coding/* ${HOME}//Library/Fonts/ && \
+mv ./D2CodingLigature/* ${HOME}//Library/Fonts/ && \
+mv ./D2CodingAll/* ${HOME}/Library/Fonts/
 
 # Move iTerm2 config
-eval "$config_move"
+mv ./com.googlecode.iterm2.plist ${HOME}/Library/Preferences/com.googlecode.iterm2.plist
+
+/bin/bash -c "source ${HOME}/.zshrc"
