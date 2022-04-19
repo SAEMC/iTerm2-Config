@@ -7,14 +7,13 @@
 $ git clone https://github.com/SAEMC/iTerm2-Config.git
 ```
 
-- 작성 중  
-- iTerm2 설치  
-- D2Coding 폰트 설치  
-
 ---
 
 ### 적용 방법
 
-- 작성 중
+- `iTerm2-Config` 디렉터리 진입 후 실행
+```
+$ cd ./iTerm2-Config && ./iTerm2_config.sh
+```
 
 <br/>
