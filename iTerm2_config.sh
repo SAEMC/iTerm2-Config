@@ -22,12 +22,14 @@ fi
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # ZSH Change Theme to agnoster
-sed -i -e 's/ZSH_THEME="robyrussell"/ZSH_THEME="agnoster"/g' ${HOME}/.zshrc
+sed -i '' 's/ZSH_THEME="robyrussell"/ZSH_THEME="agnoster"/g' ${HOME}/.zshrc
 
 # ZSH Disappear Username
+echo "# ZSH Disappear Username" >>${HOME}/.zshrc
 echo "prompt_context() {}" >>${HOME}/.zshrc
 
 # ZSH Highlighting
+echo "# ZSH Highlighting" >>${HOME}/.zshrc
 echo "source ${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>${HOME}/.zshrc
 
 # Download D2Coding
@@ -41,4 +43,4 @@ mv ./D2CodingAll/* ${HOME}/Library/Fonts/
 # Move iTerm2 config
 mv ./com.googlecode.iterm2.plist ${HOME}/Library/Preferences/com.googlecode.iterm2.plist
 
-/bin/bash -c "source ${HOME}/.zshrc"
+/bin/zsh -c "source ${HOME}/.zshrc"
