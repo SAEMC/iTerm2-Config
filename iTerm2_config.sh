@@ -19,18 +19,18 @@ done
 /bin/zsh -c "brew install --cask iterm2"
 
 # Install Oh-My-Zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+/bin/zsh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # ZSH Change Theme
-sed -i '' 's/ZSH_THEME="robyrussell"/ZSH_THEME="agnoster"/g' ${HOME}/.zshrc
+sed -i '' 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' ${HOME}/.zshrc
 
 # ZSH Disappear Username
-echo "# ZSH Disappear Username" >>${HOME}/.zshrc
+echo "\n# ZSH Disappear Username" >>${HOME}/.zshrc
 echo "prompt_context() {}" >>${HOME}/.zshrc
 
 # Download ZSH Highlighting / Set ZSH Highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${HOME}/.zsh/zsh-syntax-highlighting/
-echo "# ZSH Highlighting" >>${HOME}/.zshrc
+echo "\n# ZSH Highlighting" >>${HOME}/.zshrc
 echo "source ${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>${HOME}/.zshrc
 
 # Set Newline
@@ -49,7 +49,6 @@ prompt_newline() {
   echo -n "%{%f%}"
   CURRENT_BG=''
 }
-
 EOF
 
 # Download D2Coding / Move D2Coding
