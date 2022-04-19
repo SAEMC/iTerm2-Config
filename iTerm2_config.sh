@@ -59,7 +59,7 @@ mv ./D2Coding/* ${HOME}/Library/Fonts/ && \
 mv ./D2CodingLigature/* ${HOME}/Library/Fonts/ && \
 mv ./D2CodingAll/* ${HOME}/Library/Fonts/
 
-# Move iTerm2 config
+# Move iTerm2 config (General)
 mv ./com.googlecode.iterm2.plist ${HOME}/Library/Preferences/
 
 /bin/zsh -c "source ${HOME}/.zshrc"
