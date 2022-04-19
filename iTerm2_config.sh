@@ -21,10 +21,10 @@ done
 # Install Oh-My-Zsh
 /bin/zsh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# ZSH Change Theme
+# Change ZSH Theme
 sed -i '' 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' ${HOME}/.zshrc
 
-# ZSH Disappear Username
+# Remove ZSH Username
 echo "\n# ZSH Disappear Username" >>${HOME}/.zshrc
 echo "prompt_context() {}" >>${HOME}/.zshrc
 
