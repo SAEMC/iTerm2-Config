@@ -8,32 +8,29 @@ while true; do
 
 	if [[ "$?" -ne 0 ]]; then
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+		echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>${HOME}/.zprofile
+		eval "$(/opt/homebrew/bin/brew shellenv)"
 	else
 		break
 	fi
 done
 
-if [[ "$?" -eq 0 ]]; then
-	# Install ZSH
-	/bin/bash -c "brew install zsh"
-fi
-
 # Install Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# ZSH Change Theme to agnoster
+# ZSH Change Theme
 sed -i '' 's/ZSH_THEME="robyrussell"/ZSH_THEME="agnoster"/g' ${HOME}/.zshrc
 
 # ZSH Disappear Username
 echo "# ZSH Disappear Username" >>${HOME}/.zshrc
 echo "prompt_context() {}" >>${HOME}/.zshrc
 
-# ZSH Highlighting
+# Download ZSH Highlighting / Set ZSH Highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${HOME}/.zsh/zsh-syntax-highlighting/
 echo "# ZSH Highlighting" >>${HOME}/.zshrc
 echo "source ${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>${HOME}/.zshrc
 
-# Download D2Coding
+# Download D2Coding / Move D2Coding
 git clone https://github.com/naver/d2codingfont.git
 mv ./d2codingfont/D2Coding-Ver1.3.2-20180524.zip . && \
 unzip D2Coding-Ver1.3.2-20180524.zip
