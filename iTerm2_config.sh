@@ -30,6 +30,25 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${HOME}/.zsh/
 echo "# ZSH Highlighting" >>${HOME}/.zshrc
 echo "source ${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>${HOME}/.zshrc
 
+# Set Newline
+sed -i '' 's/^  prompt_end$/  prompt_newline\n  prompt_end/g' ${HOME}/.oh-my-zsh/themes/agnoster.zsh-theme
+cat >>${HOME}/.oh-my-zsh/themes/agnoster.zsh-theme <<EOF
+
+# Newline
+prompt_newline() {
+  if [[ -n \$CURRENT_BG ]]; then
+    echo -n "%{%k%F{\$CURRENT_BG}%}\$SEGMENT_SEPARATOR
+%(?.%F{\$CURRENT_BG}.%F{RED})>%f"
+  else
+    echo -n "%{%k%}"
+  fi
+
+  echo -n "%{%f%}"
+  CURRENT_BG=''
+}
+
+EOF
+
 # Download D2Coding / Move D2Coding
 git clone https://github.com/naver/d2codingfont.git
 mv ./d2codingfont/D2Coding-Ver1.3.2-20180524.zip . && \
