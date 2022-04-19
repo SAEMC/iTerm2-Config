@@ -9,13 +9,15 @@ OMZ_install="sh -c 'curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/mas
 config_move="/bin/bash -c 'mv ./com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist'"
 
 # Install Homebrew
-eval "$brew_check"
+while true; do
+	eval "$brew_check"
 
-if [[ "$?" -ne 0 ]]; then
-	eval "$brew_install"
-fi
-
-eval "$brew_check"
+	if [[ "$?" -ne 0 ]]; then
+		eval "$brew_install"
+	else
+		break
+	fi
+done
 
 if [[ "$?" -eq 0 ]]; then
 	# Install ZSH
@@ -27,7 +29,7 @@ eval "$OMZ_install"
 
 # Modify ~/.zshrc
 # Change Theme to agnoster
-sed -i -e 's/ZSH_THEME=\"\"/ZSH_THEME=\"agnoster\"/g' test.txt
+sed -i -e 's/ZSH_THEME=\"\"/ZSH_THEME=\"agnoster\"/g' ~/.zshrc
 
 # plugins=(git git-prompt)
 
