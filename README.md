@@ -16,4 +16,7 @@ $ git clone https://github.com/SAEMC/iTerm2-Config.git
 $ cd ./iTerm2-Config && ./iTerm2_config.sh
 ```
 
+- iTerm2 실행 - [Preferences] - [Profiles] - [Other Actions] - [Import JSON Profiles]
+
+
 <br/>
