@@ -24,9 +24,16 @@ done
 # Change ZSH Theme
 sed -i '' 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' ${HOME}/.zshrc
 
-# Remove ZSH Username
-echo "\n# ZSH Disappear Username" >>${HOME}/.zshrc
-echo "prompt_context() {}" >>${HOME}/.zshrc
+# ZSH Appear Username Only
+cat >>${HOME}/.zshrc <<EOF
+
+# ZSH Appear Username Only
+prompt_context() {
+  if [[ "\$USER" != "\$DEFAULT_USER" || -n "\$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{yellow}%}.)\$USER"
+  fi
+}
+EOF
 
 # Download ZSH Highlighting / Set ZSH Highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${HOME}/.zsh/zsh-syntax-highlighting/
@@ -62,4 +69,4 @@ mv ./D2CodingAll/* ${HOME}/Library/Fonts/
 # Move iTerm2 config (General)
 mv ./com.googlecode.iterm2.plist ${HOME}/Library/Preferences/
 
-/bin/zsh -c "source ${HOME}/.zshrc"
+(/bin/zsh -c 'source ${HOME}/.zshrc')
