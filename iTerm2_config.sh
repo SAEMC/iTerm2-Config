@@ -37,8 +37,11 @@ EOF
 
 # Download ZSH Highlighting / Set ZSH Highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${HOME}/.zsh/zsh-syntax-highlighting/
-echo "\n# ZSH Highlighting" >>${HOME}/.zshrc
-echo "source ${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>${HOME}/.zshrc
+cat >>${HOME}/.zshrc <<EOF
+
+# ZSH Highlighting
+source \${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+EOF
 
 # Set Newline
 sed -i '' 's/^  prompt_end$/  prompt_newline\n  prompt_end/g' ${HOME}/.oh-my-zsh/themes/agnoster.zsh-theme
