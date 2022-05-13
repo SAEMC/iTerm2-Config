@@ -2312,7 +2312,7 @@
 			<key>Use Bright Bold</key>
 			<true/>
 			<key>Use Cursor Guide</key>
-			<true/>
+			<false/>
 			<key>Use Custom Window Title</key>
 			<false/>
 			<key>Use Italic Font</key>
@@ -3295,7 +3295,7 @@
 			<key>Use Bright Bold</key>
 			<true/>
 			<key>Use Cursor Guide</key>
-			<true/>
+			<false/>
 			<key>Use Custom Window Title</key>
 			<false/>
 			<key>Use Italic Font</key>
@@ -4280,7 +4280,7 @@
 			<key>Use Bright Bold</key>
 			<true/>
 			<key>Use Cursor Guide</key>
-			<true/>
+			<false/>
 			<key>Use Custom Window Title</key>
 			<false/>
 			<key>Use Italic Font</key>
@@ -5263,7 +5263,7 @@
 			<key>Use Bright Bold</key>
 			<true/>
 			<key>Use Cursor Guide</key>
-			<true/>
+			<false/>
 			<key>Use Custom Window Title</key>
 			<false/>
 			<key>Use Italic Font</key>
@@ -6250,7 +6250,7 @@
 			<key>Use Bright Bold</key>
 			<true/>
 			<key>Use Cursor Guide</key>
-			<true/>
+			<false/>
 			<key>Use Custom Window Title</key>
 			<false/>
 			<key>Use Italic Font</key>
@@ -7233,7 +7233,7 @@
 			<key>Use Bright Bold</key>
 			<true/>
 			<key>Use Cursor Guide</key>
-			<true/>
+			<false/>
 			<key>Use Custom Window Title</key>
 			<false/>
 			<key>Use Italic Font</key>
