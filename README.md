@@ -9,7 +9,7 @@ $ xcode-select --install
 
 - SAEMC iTerm2 Config 프로젝트 다운로드  
 ```
-$ git clone https://github.com/SAEMC/iTerm2-Config.git
+$ git clone https://github.com/SAEMC/iTerm2-Config
 ```
 
 ---
