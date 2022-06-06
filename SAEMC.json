@@ -26,7 +26,7 @@
     "Green Component" : 0.69803923368453979
   },
   "Use Custom Window Title" : false,
-  "Right Option Key Sends" : 0,
+  "Right Option Key Sends" : 2,
   "Show Status Bar" : true,
   "Character Encoding" : 4,
   "Selection Color" : {
@@ -192,6 +192,7 @@
     "Alpha Component" : 0.17647058823529413,
     "Green Component" : 0.69803923368453979
   },
+  "Right Option Key Changeable" : true,
   "BM Growl" : true,
   "Ansi 3 Color" : {
     "Red Component" : 0.89803922176361084,
@@ -413,7 +414,7 @@
   },
   "Badge Right Margin" : 10,
   "Use Bold Font" : true,
-  "Silence Bell" : false,
+  "Silence Bell" : true,
   "Ansi 12 Color" : {
     "Red Component" : 0.3803921639919281,
     "Color Space" : "sRGB",
@@ -446,7 +447,7 @@
     "Green Component" : 0.42352941632270813
   },
   "Name" : "SAEMC",
-  "Blinking Cursor" : true,
+  "Blinking Cursor" : false,
   "Guid" : "C9B24F6D-6604-489C-B526-B5CBF133F10E",
   "Badge Max Width" : 0.5,
   "Idle Code" : 0,
@@ -473,7 +474,7 @@
   },
   "Ambiguous Double Width" : false,
   "Badge Max Height" : 0.20000000000000001,
-  "Cursor Type" : 1,
+  "Cursor Type" : 2,
   "Ansi 0 Color" : {
     "Red Component" : 0.12941177189350128,
     "Color Space" : "sRGB",
@@ -495,7 +496,7 @@
   "Command" : "",
   "Terminal Type" : "xterm-256color",
   "Horizontal Spacing" : 1,
-  "Option Key Sends" : 0,
+  "Option Key Sends" : 2,
   "Minimum Contrast" : 0,
   "Ansi 15 Color" : {
     "Red Component" : 0.67058825492858887,
