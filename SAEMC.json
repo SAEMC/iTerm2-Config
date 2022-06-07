@@ -534,7 +534,7 @@
   "Columns" : 80,
   "Unicode Normalization" : 1,
   "Use Tab Color" : false,
-  "Visual Bell" : true,
+  "Visual Bell" : false,
   "Custom Directory" : "No",
   "ASCII Ligatures" : false,
   "Ansi 5 Color" : {
