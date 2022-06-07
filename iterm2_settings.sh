@@ -4,15 +4,15 @@ brew_check="/bin/bash -c 'brew --version >/dev/null 2>&1'"
 
 # Install Homebrew
 while true; do
-    eval "$brew_check"
+  eval "$brew_check"
 
-    if [[ "$?" -ne 0 ]]; then
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>${HOME}/.zprofile
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-    else
-        break
-    fi
+  if [[ "$?" -ne 0 ]]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>${HOME}/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  else
+    break
+  fi
 done
 
 # Install iTerm2
