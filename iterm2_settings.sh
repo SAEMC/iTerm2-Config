@@ -73,3 +73,5 @@ mv ./D2CodingAll/* ${HOME}/Library/Fonts/
 mv ./com.googlecode.iterm2.plist ${HOME}/Library/Preferences/
 
 (/bin/zsh -c 'source ${HOME}/.zshrc')
+
+exit 0
