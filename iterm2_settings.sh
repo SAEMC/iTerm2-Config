@@ -61,13 +61,8 @@ prompt_newline() {
 }
 EOF
 
-# Download D2Coding / Move D2Coding
-git clone https://github.com/naver/d2codingfont.git
-mv ./d2codingfont/D2Coding-Ver1.3.2-20180524.zip . && \
-unzip D2Coding-Ver1.3.2-20180524.zip
-mv ./D2Coding/* ${HOME}/Library/Fonts/ && \
-mv ./D2CodingLigature/* ${HOME}/Library/Fonts/ && \
-mv ./D2CodingAll/* ${HOME}/Library/Fonts/
+# Download NerdFont
+curl -fLo "${HOME}/Library/Fonts/Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 
 # Move iTerm2 config (General)
 mv ./com.googlecode.iterm2.plist ${HOME}/Library/Preferences/
