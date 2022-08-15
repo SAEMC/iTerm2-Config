@@ -8,7 +8,7 @@
 xcode-select --install
 ```
 
-### 1-2. SAEMC iTerm2 Settings 다운로드
+### 1-2. SAEMC's iTerm2 Settings 다운로드
 
 ```bash
 git clone https://github.com/SAEMC/iTerm2-Settings
