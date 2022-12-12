@@ -8,7 +8,7 @@
 
 - macOS >= Big Sur
 
-### Insatll Xcode
+### Install Xcode
 
 ```shell
 xcode-select --install
