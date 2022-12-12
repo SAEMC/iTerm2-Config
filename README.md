@@ -1,27 +1,36 @@
 # SAEMC's iTerm2-Configs
 
-## 1. 준비 사항
+## Prerequisites
 
-### 1-1. Xcode 설치
+### Recommended
 
-```bash
+#### OS version
+
+- macOS >= Big Sur
+
+### Insatll Xcode
+
+```shell
 xcode-select --install
 ```
 
-### 1-2. SAEMC's iTerm2-Configs 다운로드
+### Clone this repository
 
-```bash
-git clone https://github.com/SAEMC/iTerm2-Configs
+```shell
+git clone https://github.com/SAEMC/iTerm2-Configs && \
+cd ./iTerm2-Configs/
 ```
 
 <br/>
 
-## 2. 적용 방법
+## Installation
 
-### 2-1. `iTerm2-Configs` 디렉터리 진입 후 실행
+### Install dependencies
 
-> 다음 명령 실행 - iTerm2 실행 - [Preferences] - [Profiles] - [Other Actions] - [Import JSON Profiles]
-
-```bash
-cd ./iTerm2-Configs && ./iterm2_configs.sh
+```shell
+./iterm2_configs.sh
 ```
+
+### Apply configs
+
+- Run iTerm2 - [Preferences] - [Profiles] - [Other Actions] - [Import JSON Profiles]
